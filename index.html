@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosa | Home</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+  <div class="logo">Nosa</div>
+
+  <!-- Hamburger on the right -->
+  <div class="menu-icon" id="menu-toggle">&#9776;</div>
+
+  <nav>
+    <ul id="menu-items">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#hero">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-img">
+    <img src="img/nosa.png" alt="Nosa Profile">
+  </div>
+  <h1>Nosa Aiwekhoe</h1>
+  <p class="subtitle">Full-Stack Developer • Automation Architect</p>
+  <p class="description">
+    I build systems that move quietly and scale loudly.
+  </p>
+  <a href="portfolio.html" style="margin-top:20px;color:#00abf0;">Enter Portfolio →</a>
+</section>
+
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <div class="terminal">
+    <p><span class="prompt">nosa@system:~$</span> whoami</p>
+    <p class="output">Full-stack developer focused on automation & scalable systems.</p>
+
+    <p><span class="prompt">nosa@system:~$</span> current_focus</p>
+    <p class="output">Telegram bots • Django systems • AI integrations</p>
+
+    <p><span class="prompt">nosa@system:~$</span> mindset</p>
+    <p class="output">Build once. Automate forever.</p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="portfolio">
+  <h2>Selected Work</h2>
+
+  <div class="project-grid">
+
+
+    <a href="https://whereisnosa.github.io/nft/" target="_blank" class="project-card">
+      <h3>NFT Showcase</h3>
+      <p>A visually engaging NFT showcase page that presents digital collectibles with interactive elements and clear navigation.</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Responsive</span>
+        <span>NFT</span>
+        <span>UI/UX</span>
+        <span>Showcase</span>
+      </div>
+    </a>
+
+    <a href="https://whereisnosa.github.io/adex/" target="_blank" class="project-card">
+      <h3>Adex Landing Page</h3>
+      <p>A sleek, modern landing page designed for Adex, showcasing services and capturing leads with a professional, agency-style interface.</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Responsive</span>
+        <span>UI/UX</span>
+        <span>Landing Page</span>
+      </div>
+    </a>
+
+    <a href="https://whereisnosa.github.io/foot/" target="_blank" class="project-card">
+      <h3>Footwear ecommerce Landing Page</h3>
+      <p>A responsive landing page for Foot, featuring a modern design that highlights brand offerings and user engagement.</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Responsive</span>
+        <span>UI/UX</span>
+        <span>Landing Page</span>
+      </div>
+    </a>
+
+
+    <a href="https://t.me/Dummyisabot" target="_blank" class="project-card">
+      <h3>DummyBotSavesMan</h3>
+      <p>Multi-functional Telegram automation system.</p>
+      <div class="tags">
+        <span>Python</span>
+        <span>Telebot</span>
+        <span>SQLite</span>
+      </div>
+    </a>
+
+    <a href="https://whereisnosa.pythonanywhere.com/" target="_blank" class="project-card">
+      <h3>Django Blog System</h3>
+      <p>Dynamic blog with custom backend logic.</p>
+      <div class="tags">
+        <span>Django</span>
+        <span>PostgreSQL</span>
+      </div>
+    </a>
+
+    <a href="https://whereisnosa.github.io/room44/" target="_blank" class="project-card">
+      <h3>Room44</h3>
+      <p>Brand-focused landing experience.</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+      </div>
+    </a>
+
+    <a href="https://whereisnosa.github.io/yamboy" target="_blank" class="project-card">
+      <h3>Yamboy</h3>
+      <p>Restaurant site built for student audience.</p>
+      <div class="tags">
+        <span>Frontend</span>
+        <span>Branding</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:whereisnosa@gmail.com">whereisnosa@gmail.com</a></p>
+  <p>Telegram: <a href="https://t.me/whereisnosa">@whereisnosa</a></p>
+  <p>Let's build something efficient.</p>
+</section>
+
+<footer>
+  <p>© 2026 Nosa Aiwekhoe</p>
+</footer>
+
+
+<script>
+  const reveals = document.querySelectorAll('.project-card, .terminal, .hero, .projects h2, .about h2');
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    reveals.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 150; // distance before element appears
+      if(elementTop < windowHeight - revealPoint) {
+        el.classList.add('reveal');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuItems = document.getElementById('menu-items');
+
+  menuToggle.addEventListener('click', () => {
+    menuItems.parentElement.classList.toggle('show'); // add/remove 'show' on nav
+  });
+
+  // Optional: Close menu when clicking a link
+  document.querySelectorAll('#menu-items a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuItems.parentElement.classList.remove('show');
+    });
+  });
+</script>
+
+</body>
+</html>

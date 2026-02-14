@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: #e6edf3;
+  line-height: 1.6;
+  background: radial-gradient(circle at top left, #11161c 0%, #0b0f14 60%);
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  padding: 30px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #8b949e;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #00abf0;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 10% 60px;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #00abf0;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #8b949e;
+  max-width: 500px;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 60px 10%;
+}
+
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.terminal {
+  background: #0f141a;
+  border: 1px solid rgba(0,171,240,0.15);
+  border-radius: 10px;
+  padding: 30px;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.prompt {
+  color: #00abf0;
+}
+
+.output {
+  color: #8b949e;
+  margin-bottom: 15px;
+}
+
+/* PROJECTS */
+.projects {
+  padding: 60px 10%;
+}
+
+.projects h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #11161c;
+  padding: 25px;
+  border: 1px solid rgba(0,171,240,0.15);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #00abf0;
+  box-shadow: 0 0 20px rgba(0,171,240,0.2);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #8b949e;
+  margin-bottom: 15px;
+}
+
+.tags span {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  margin-right: 8px;
+  background: rgba(0,171,240,0.1);
+  color: #00abf0;
+  border-radius: 20px;
+}
+
+/* FOOTER */
+footer {
+  padding: 60px 10%;
+  text-align: center;
+  color: #8b949e;
+  font-size: 14px;
+}
